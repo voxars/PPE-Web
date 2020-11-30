@@ -1,4 +1,6 @@
 <?php
+class Salle
+{
     private nSalle;
     private nomSalle;
     private nbPoste;
@@ -93,3 +95,4 @@
     public function setCapacity($capacity): void {
         $this->capacity = $capacity ;
     }
+}
