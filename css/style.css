@@ -1,0 +1,142 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  font-family: Arial;
+  color : #333;
+  font-size : 14px;
+  line-height : 1.3;
+  scroll-behavior: smooth;
+  background-color : var(--fondC);
+
+}
+
+header {
+  background-color: #343a40 ;
+	font-size: 20.0pt;
+	text-align: center;
+	color: white;
+}
+
+
+footer.page-footer {	
+  background-color: #343a40;
+	margin-top:20pt;
+    bottom: 0;
+    color: #fff;
+	padding:5pt;
+}
+
+.black {
+    background-color: #343a40 !important;
+}
+
+.error-message{
+  background: url(../images/cancel.png) 10px center no-repeat;
+  padding: 0 0 0 30px;
+  display: none;
+  color:#ff5b5b;
+}
+
+.image-radio {
+  cursor: pointer;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 4px solid transparent;
+  margin-bottom: 0;
+  outline: 0;
+}
+
+.image-radio input[type="radio"] {
+  display: none;
+}
+
+.image-radio-checked {
+  border-color: #4783B0;
+}
+
+.image-radio .glyphicon {
+position: absolute;
+color: #4A79A3;
+background-color: #fff;
+padding: 10px;
+top: 0;
+right: 0;
+}
+
+.image-radio-checked .glyphicon {
+display: block !important;
+}
+
+#tagDomaine{
+	display:inline-block;
+	padding-left : 0px;
+	font-style: italic;
+        margin : 0px;
+}
+
+li.tag{
+	display:inline-block;
+	border:1px solid rgba(0,0,0,0.05);
+	background-color:rgba(0,0,0,0.05);
+	padding:2px;
+	margin:2px;
+	border-radius: 2px;
+}
+
+li.tag:hover{
+	border-width:1px;
+	border-style : solid;
+	border-color : #bbb;
+	background-color:rgba(0,0,0,0.1);	
+}
+
+span.tag{
+	color:rgb(255,50,50);
+	
+}
+
+div.card{
+    position : relative;
+    width: 250px;
+    height : 340px;
+    float:left;
+    padding: 10px;
+    margin : 10px;
+    background-color : var(--fondC);
+    box-shadow: 1px 1px 4px #bbb;
+}
+div.photoCard>img{
+    
+    position : relative;
+    top:-10px;
+    left : 40px;
+    max-width : 200px;
+    max-height: 140px;
+    
+}
+
+
+div.descrCard{
+    position : relative;
+    top:0px;
+}
+div.tagCard{
+    position:absolute;
+    bottom:10px;
+    width : 220px;
+    text-align: right;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.verticalMenu {
+  width: 200px;
+}
