@@ -1,0 +1,6 @@
+RewriteEngine On # Activer le module Rewrite
+RewriteRule ^bateau/?$ API/bateau.php [NC,L]
+RewriteRule ^[^/]+/(\d+)$ API/bateau.php?id=$1
+
+RewriteRule ^traversee/?$ API/traversee.php [NC,L]
+RewriteRule ^[^/]+/(\d+)$ API/traversee.php?id=$1
