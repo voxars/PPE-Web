@@ -1,0 +1,1 @@
+SELECT s.nSalle, s.nomSalle, s.nbPoste, s.indIP, r.disabled, r.area_id, r.room_name, r.sort_key, r.description, r.capacity FROM salle s INNER JOIN mrbs_room r ON s.id = r.id
