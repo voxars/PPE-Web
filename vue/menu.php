@@ -8,6 +8,9 @@
       <li class="nav-item active">
         <a class="nav-link" href="./?action=accueil">Accueil <span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="./?action=salle">Salles <span class="sr-only">(current)</span></a>
+      </li>
       <li class="nav-item">
     </ul>
   </div>
