@@ -7,13 +7,13 @@
           <tr>
             <th scope="col">id</th>
             <th scope="col">nom</th>
-            <th scope="col">nom</th>
-            <th scope="col">nom</th>
-            <th scope="col">nom</th>
-            <th scope="col">nom</th>
-            <th scope="col">nom</th>
-            <th scope="col">nom</th>
-            <th scope="col">nom</th>
+            <th scope="col">NbPoste</th>
+            <th scope="col">IndIP</th>
+            <th scope="col">Disabled</th>
+            <th scope="col">Area_id</th>
+            <th scope="col">Room_name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Capacity</th>
           </tr>
         </thead>
         <tbody>
