@@ -1,14 +1,17 @@
-<?
-    private nSalle;
-    private nomSalle;
-    private nbPoste;
-    private indIP;
-    private disabled;
-    private area_id;
-    private room_name;
-    private sort_key;
-    private description;
-    private capacity;
+
+<?php
+class Salle
+{
+    private $nSalle;
+    private $nomSalle;
+    private $nbPoste;
+    private $indIP;
+    private $disabled;
+    private $area_id;
+    private $room_name;
+    private $sort_key;
+    private $description;
+    private $capacity;
 
     public function __construct($nSalle, $nomSalle, $nbPoste, $indIP, $disabled, $area_id, $room_name, $description, $capacity){
         $this->nSalle= $nSalle;
@@ -62,7 +65,7 @@
         $this->nSalle = $nSalle ;
     }
 
-    public function setn=NomSalle($nomSalle): void {
+    public function setNomSalle($nomSalle): void {
         $this->nomSalle = $nomSalle ;
     }
 
@@ -92,4 +95,7 @@
 
     public function setCapacity($capacity): void {
         $this->capacity = $capacity ;
+
     }
+}
+
