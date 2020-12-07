@@ -14,7 +14,7 @@ class SalleManager extends Manager
         return new Salle($donnees['nSalle'], $donnees['nomSalle'], $donnees['nbPoste'], $donnees['indIP'], $donnees['disabled'], $donnees['area_id'], $donnees['room_name'], $donnees['sort_key'], $donnees['description'], $donnees['capacity']);
     }
     
-    public function getList() //instancie une collection d'objets ports
+    public function getList()
     {
         $salles = [];
         $q = $this->getPDO()->query('SELECT s.nSalle, s.nomSalle, s.nbPoste, s.indIP, r.disabled, r.area_id, r.room_name, r.sort_key, r.description, r.capacity FROM salle s INNER JOIN mrbs_room r ON s.id = r.id');
