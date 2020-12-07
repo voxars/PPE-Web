@@ -1,6 +1,7 @@
 <?php
   var_dump($salles);
 ?>
+
   <h1><?= $titre ?></h1>
   <table class="table">
         <thead>
@@ -38,3 +39,4 @@
 
     </tbody>
   </table>
+
