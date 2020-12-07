@@ -1,5 +1,5 @@
 <?php
-  var_dump($salles);
+  //var_dump($salles);
 ?>
 
   <h1><?= $titre ?></h1>
