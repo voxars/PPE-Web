@@ -1,5 +1,5 @@
 <?php
-  // var_dump($ports);
+  var_dump($salles);
 ?>
   <h1><?= $titre ?></h1>
   <table class="table">
@@ -22,15 +22,15 @@
     foreach ($salles as $salle){
     ?> 
       <tr>
-        <td><?= $port->getNSalle() ?></td>
-        <td><?= $port->getNomSalle() ?></td>
-        <td><?= $port->getNbPoste() ?></td>
-        <td><?= $port->getIndIP() ?></td>
-        <td><?= $port->getDisabled() ?></td>
-        <td><?= $port->getArea_id() ?></td>
-        <td><?= $port->getRoom_name() ?></td>
-        <td><?= $port->getDescription() ?></td>
-        <td><?= $port->getCapacity() ?></td>
+        <td><?= $salle->getNSalle() ?></td>
+        <td><?= $salle->getNomSalle() ?></td>
+        <td><?= $salle->getNbPoste() ?></td>
+        <td><?= $salle->getIndIP() ?></td>
+        <td><?= $salle->getDisabled() ?></td>
+        <td><?= $salle->getArea_id() ?></td>
+        <td><?= $salle->getRoom_name() ?></td>
+        <td><?= $salle->getDescription() ?></td>
+        <td><?= $salle->getCapacity() ?></td>
       </tr>
     <?php
     }
