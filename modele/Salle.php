@@ -1,3 +1,4 @@
+
 <?php
 class Salle
 {
@@ -94,5 +95,7 @@ class Salle
 
     public function setCapacity($capacity): void {
         $this->capacity = $capacity ;
+
     }
 }
+

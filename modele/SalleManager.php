@@ -25,4 +25,5 @@ class SalleManager extends Manager
         return $salles;
     }
 
+
 }
