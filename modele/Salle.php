@@ -26,7 +26,9 @@ class Salle
     }
 
     public function getNSalle(){
-        return $this->  nSalle ;
+
+        return $this->nSalle ;
+
     }
 
     public function getNomSalle(){
