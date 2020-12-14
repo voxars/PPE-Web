@@ -10,13 +10,13 @@ $menuBurger[] = Array("url"=>"./?action=connexion","label"=>"Connexion");
 $menuBurger[] = Array("url"=>"./?action=inscription","label"=>"Inscription");
 
 // recuperation des donnees GET, POST, et SESSION
-if (isset($_POST["mailU"]) && isset($_POST["mdpU"])){
-    $mailU=$_POST["mailU"];
+if (isset($_POST["email"]) && isset($_POST["mdpU"])){
+    $email=$_POST["email"];
     $mdpU=$_POST["mdpU"];
 }
 else
 {
-    $mailU="";
+    $email="";
     $mdpU="";
 }
 
@@ -24,7 +24,7 @@ else
 
 
 // traitement si necessaire des donnees recuperees
-login($mailU,$mdpU);
+login($email,$mdpU);
 
 if (isLoggedOn()){ // si l'utilisateur est connecté on redirige vers le controleur monProfil
     include "$racine/controleur/monProfil.php";
