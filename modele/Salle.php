@@ -9,7 +9,6 @@ class Salle
     private $disabled;
     private $area_id;
     private $room_name;
-    private $sort_key;
     private $description;
     private $capacity;
 

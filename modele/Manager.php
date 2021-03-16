@@ -5,8 +5,8 @@ class Manager
 {
     protected function dbConnect()
     {
-        $login = "Amaleo";
-        $mdp = "A79f4623.";
+        $login = "root";
+        $mdp = "";
         $bd = "parcinfo";
         $serveur = "localhost";
 
