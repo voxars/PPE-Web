@@ -15,7 +15,6 @@
         <a class="nav-link" href="./?action=ajoutPoste">Ajout d'un poste <span class="sr-only">(current)</span></a>
       </li>
 
-
     </ul>
   </div>
 </nav>
