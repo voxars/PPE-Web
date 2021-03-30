@@ -4,6 +4,8 @@ function controleurPrincipal($action) {
     $lesActions["defaut"] = "accueil.php";
     $lesActions["accueil"] = "accueil.php";
     $lesActions["salle"] = "afficheSalle.php";
+    $lesActions["ajoutPoste"] = "afficheAjoutPoste.php";
+
 
 
     if (array_key_exists($action, $lesActions)) {
