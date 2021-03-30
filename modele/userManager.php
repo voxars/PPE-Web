@@ -1,25 +1,44 @@
 <?php
-
+ 
 require_once("modele/Manager.php");
 require_once("modele/user.php");
-
-class SalleManager extends Manager
+ 
+class userManager extends Manager
 {
-    function verif($login, $pass){
-
-    $cnx=getPDO();
-    $res=0;
-    $sel=$cnx->prepare("select * from mrbs_users where email=:login and password=:pass");
-    $sel->bindValue(':login', $login, PDO::PARAM_STR);
-    $sel->bindValue(':pass', $pass, PDO::PARAM_STR);
-    $sel->execute(array($login,$pass));
-    $tab=$sel->fetchAll();
-    if(count($tab)>0){
-        $_SESSION["prenomNom"]=ucfirst(strtolower($tab[0]["prenom"])).
-        " ".strtoupper($tab[0]["nom"]);
-        $res=1;
+ 
+    public function getList() //instancie une collection d'objets Salle
+    {
+        $q = $this->getPDO()->query('SELECT id, level, name, password, email FROM mrbs_users');
+ 
+        $users = [];
+        while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
+ 
+            $users[$donnees['name']] = new users($donnees['id'], $donnees['level'], $donnees['name'], $donnees['password'], $donnees['email']);
+        }
+        return $users;
     }
-        return $res;
+ 
+    public function DoesUserExist($email, $password) //instancie une collection d'objets Salle
+    {
+        $exist = false;
+        $q = $this->getPDO()->query('SELECT id, level, name, password, email FROM mrbs_users WHERE email = "' . $email . '" AND password = "' . $password . '"');
+ 
+        $users = [];
+        $level = 0;
+        while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
+            $users[$donnees['name']] = new users($donnees['id'], $donnees['level'], $donnees['name'], $donnees['password'], $donnees['email']);
+            $level = $donnees['level'];
+        }
+ 
+        if (count($users) != 0) {
+            $exist = true;
+            session_start();
+            $_SESSION["connected"] = true;
+            $_SESSION["level"] = $level;
+        } else {
+            $_SESSION["connected"] = false;
+        }
+ 
+        return $exist;
     }
 }
-?>

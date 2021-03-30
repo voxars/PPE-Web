@@ -1,8 +1,8 @@
 <?php
 
 function connexionPDO() {
-    $login = "Amaleo";
-    $mdp = "A79f4623.";
+    $login = "root";
+    $mdp = "root";
     $bd = "parcinfo";
     $serveur = "localhost";
 

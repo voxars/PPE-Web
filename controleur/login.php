@@ -1,26 +1,13 @@
 <?php
+session_start();
+if($_SESSION["test1"]== null){
+    $_SESSION["test1"] = false;
+}
 if ( $_SERVER["SCRIPT_FILENAME"] == __FILE__ ){
     $racine="..";
 }
-include("modele/bd.liaison.inc.php");
+require_once("$racine/modele/userManager.php");
 
-@$login=$_POST["login"];
-@$pass=md5($_POST["pass"]);
-@$valider=$_POST["valider"];
-$erreur="";
-
-if(isset($valider)){
-    $res=verif($login,$pass);
-    
-    if($res==1){
-        $_SESSION["autoriser"]="oui";
-        header("location:acceuil.php");
-        
-    }
-    else{
-        $erreur="Mauvais login ou mot de passe!";
-    }
-}
 
 
 $titre = "Accueil";
