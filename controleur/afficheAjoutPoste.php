@@ -3,7 +3,7 @@ if ( $_SERVER["SCRIPT_FILENAME"] == __FILE__ ){
     $racine="..";
 }
 
-require_once("$racine/modele/SalleManager.php");
+require_once("$racine/modele/AjoutPosteManager.php");
     
 $titre="Ajouter un poste";
 
