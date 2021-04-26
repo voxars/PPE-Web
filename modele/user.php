@@ -1,5 +1,5 @@
 <?php
-class login 
+class user 
 {
     private $mail;
     private $pass;
@@ -11,7 +11,7 @@ class login
         $this->mail=$mail;
         $this->pass=$pass;
         $this->nom=$nom;
-        $this->etat=$etat;
+        //$this->etat=$etat;
         $this->level=$level;
         $this->id=$id;
     }

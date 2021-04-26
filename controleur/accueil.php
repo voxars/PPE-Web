@@ -1,13 +1,14 @@
 <?php
+session_start();
 if ( $_SERVER["SCRIPT_FILENAME"] == __FILE__ ){
     $racine="..";
 }
-session_start();
-$_SESSION["autoriser"]="";
-   if($_SESSION["autoriser"]!="oui"){
-    include "$racine/controleur/login.php";
-      exit();
-   }
+require_once("$racine/modele/userManager.php");
+
+if(count($_POST)>0) {
+    $userManager = new userManager();
+    $user = $userManager->verifUser($_POST['email'],$_POST['password']); 
+}
 
 $titre = "Accueil";
 include "$racine/vue/header.php";
