@@ -55,9 +55,19 @@
     <form action="#" method="post">
     <?php
         echo ('Numéro du poste:');
-        echo $form->input('username');
+        echo $form->input('nPoste');
         echo ('Nom du poste:');
-        echo $form->input('password');
+        echo $form->input('nomPoste');
+        echo ('IP:');
+        echo $form->input('indIP');
+        echo ('AD:');
+        echo $form->input('ad');
+        echo ('Le type de poste:');
+        echo $form->input('typePoste');
+        echo ('Numero de la salle:');
+        echo $form->input('nSalle');
+        echo ('Nombre de Log:');
+        echo $form->input('nbLog');
         echo $form->submit();
     ?>
     </form>

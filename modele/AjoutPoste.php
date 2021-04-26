@@ -103,6 +103,7 @@ class Form{
     public function __construct($data = array()){
         $this->data = $data;
     }
+
     public function input($name){
         echo '<input type="text" name="' .$name. '" value=""';
         ?><br><br><br><?php
