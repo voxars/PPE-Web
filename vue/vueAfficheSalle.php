@@ -1,7 +1,7 @@
 
 <h1><?= $titre ?></h1>
 <?php
-  var_dump($salles);
+  //var_dump($salles);
 foreach ($salles as $salle) {
 ?>
     <div class="card" style="width: 18rem;">
