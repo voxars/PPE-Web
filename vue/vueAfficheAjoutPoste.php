@@ -52,7 +52,7 @@
 <?php
     $form = new Form($_POST);
 ?>
-    <form action="#" method="post">
+    <form action="envoiePoste" method="post">
     <?php
         echo ('Numéro du poste:');
         echo $form->input('nPoste');
@@ -68,7 +68,7 @@
         echo $form->input('nSalle');
         echo ('Nombre de Log:');
         echo $form->input('nbLog');
-        
+
         echo $form->submit();
     ?>
     </form>
