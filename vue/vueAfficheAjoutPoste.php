@@ -2,9 +2,10 @@
 
 
 <?php
+
     $form = new Form($_POST);
 ?>
-    <form action="envoiePoste" method="post">
+    <form action="#" method="post">
     <?php
         echo ('Numéro du poste:');
         echo $form->input('nPoste');

@@ -9,9 +9,9 @@ require_once("$racine/modele/posteManager.php");
 require_once("$racine/modele/areaManager.php");
     
 $titre = "Salle";
-
+$nsalle = $_GET['Salle'];
 $salleManager = new SalleManager();
-$salles = $salleManager->getList();
+$salles = $salleManager->getListSalle($nsalle);
 
 $posteManager = new posteManager();
 $postes = $posteManager->getList();
