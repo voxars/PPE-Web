@@ -68,6 +68,7 @@
         echo $form->input('nSalle');
         echo ('Nombre de Log:');
         echo $form->input('nbLog');
+        
         echo $form->submit();
     ?>
     </form>
