@@ -31,6 +31,12 @@ else{
       <li class="nav-item active">
         <a class="nav-link" href="./?action=accueil">Accueil <span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="./?action=salle">Salles <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="./?action=ajoutPoste">Ajout d'un poste <span class="sr-only">(current)</span></a>
+      </li>
     </ul>
   </div>
 </nav>
