@@ -2,7 +2,7 @@
 
 require_once("modele/Manager.php");
 require_once("modele/AjoutPoste.php");
-require_once("modele/form.php");
+
 
 class AjoutPosteManager extends Manager
 {

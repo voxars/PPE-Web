@@ -28,7 +28,7 @@ foreach ($salles as $salle) {
                     <?php
                 }
             }?>
-            <a class="link" class="card-link" href="./?action=ajoutPoste&nSalle=<?= $salle->GetNSalle() ?>">Ajout d'un poste <span class="sr-only">(current)</span></a>
+
             </p>
         </div>
     </div>
