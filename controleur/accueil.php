@@ -10,6 +10,8 @@ if(count($_POST)>0) {
     $user = $userManager->verifUser($_POST['email'],$_POST['password']); 
 }
 
+
+
 $titre = "Accueil";
 include "$racine/vue/header.php";
 include "$racine/vue/vueAccueil.php";

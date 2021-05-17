@@ -19,6 +19,9 @@ $postes = $posteManager->getList();
 $areaManager = new areaManager();
 $areas = $areaManager->getList();
 
+
+
+
 include "$racine/vue/header.php";
 include "$racine/vue/vueAfficheSalle.php";
 include "$racine/vue/footer.php";

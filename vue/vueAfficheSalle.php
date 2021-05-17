@@ -3,6 +3,7 @@
 <?php
   //var_dump($salles);
 foreach ($salles as $salle) {
+
 ?>
     <div class="card" style="width: 18rem;">
         <div class="card-body">
@@ -27,6 +28,7 @@ foreach ($salles as $salle) {
                     <?php
                 }
             }?>
+
             </p>
         </div>
     </div>
