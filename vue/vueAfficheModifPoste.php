@@ -1,15 +1,21 @@
-<h1>Ajouter un nouveau poste et l'installer dans une salle</h1>
+<h1>Modifier un poste</h1>
 
 
-<form action="./?action=ajoutPoste" method="post">
+<form action="./?action=modifPoste" method="post">
+    <select class="browser-default custom-select" name="nomPoste">
+        <?php
+        foreach ($nomPoste as $nomPostes)
+        {
+            ?>
+            <option><?php echo $nomPostes->getNomPoste(); ?></option>
+            <?php
+        }
+        ?>
+    </select>
+
     <div class="form-outline mb-4">
         <label class="form-label" name="nPoste" for="nPoste">Numéro du poste:</label>
         <input  name="nPoste" id="nPoste" class="form-control" value="p"/>
-    </div>
-    
-    <div class="form-outline mb-4">
-        <label class="form-label" name="nomPoste" for="nomPoste">Nom du poste:</label>
-        <input  name="nomPoste" id="nomPoste" class="form-control" value="Poste "/>
     </div>
 
     <div class="form-outline mb-4">
@@ -22,13 +28,14 @@
                 <option><?php echo $ipp->getIp(); ?></option>
                 <?php
             }
+
                 ?>
         </select>
     </div>
-    
+
     <div class="form-outline mb-4">
         <label class="form-label" name="ad" for="ad">AD:</label>
-        <input  name="ad" id="ad" class="form-control" maxlength="2" />
+        <input  name="ad" id="ad" class="form-control"/>
     </div>
 
     <div class="form-outline mb-4">
@@ -52,13 +59,14 @@
             foreach ($salles as $salless)
             {
                 ?>
-                <option><?php echo $salless->getnSalle(); ?></option>
+                <option><?php echo $salless->getNSalle(); ?></option>
                 <?php
             }
+
             ?>
         </select>
     </div>
 
-    <button type="submit" class="btn btn-primary btn-block">Ajouter le poste</button>
+    <button type="submit" class="btn btn-primary btn-block">Modifier le poste </button>
 </form>
 
