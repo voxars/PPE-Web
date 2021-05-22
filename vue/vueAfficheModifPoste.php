@@ -35,7 +35,7 @@
 
     <div class="form-outline mb-4">
         <label class="form-label" name="ad" for="ad">AD:</label>
-        <input  name="ad" id="ad" class="form-control"/>
+        <input  name="ad" id="ad" class="form-control" maxlength="2"/>
     </div>
 
     <div class="form-outline mb-4">
