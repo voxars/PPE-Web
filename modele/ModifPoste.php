@@ -8,8 +8,9 @@ class ModifPoste
     private $ad;
     private $typePoste;
     private $nSalle;
+    private $nbLog;
 
-    public function __construct($nPoste, $nomPoste, $indIP, $ad, $typePoste, $nSalle)
+    public function __construct($nPoste, $nomPoste, $indIP, $ad, $typePoste, $nSalle, $nbLog)
     {
         $this->nPoste = $nPoste;
         $this->nomPoste = $nomPoste;
@@ -17,6 +18,7 @@ class ModifPoste
         $this->ad = $ad;
         $this->typePoste = $typePoste;
         $this->nSalle = $nSalle;
+        $this->nbLog = $nbLog;
     }
     
     public function getNPoste()
@@ -48,6 +50,12 @@ class ModifPoste
     {
         return $this->nSalle ;
     }
+
+    public function getNbLog()
+    {
+        return $this->nbLog ;
+    }
+
 
     public function setNPoste($nPoste): void 
     {

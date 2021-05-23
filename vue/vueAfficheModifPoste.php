@@ -67,6 +67,11 @@
         </select>
     </div>
 
+    <div class="form-outline mb-4">
+        <label class="form-label" name="nbLog" for="nbLog">nbLog:</label>
+        <input  name="nbLog" id="nbLog" class="form-control" maxlength="2"/>
+    </div>
+
     <button type="submit" class="btn btn-primary btn-block">Modifier le poste </button>
 </form>
 

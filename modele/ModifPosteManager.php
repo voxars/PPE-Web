@@ -8,23 +8,24 @@ class ModifPosteManager extends Manager
 {
     public function listePoste(){
         $postes = [];
-        $q = $this->getPDO()->query('SELECT `nPoste`,`nomPoste`,`indIP`,`ad`,`typePoste`,`nSalle` FROM `poste`');
+        $q = $this->getPDO()->query('SELECT `nPoste`,`nomPoste`,`indIP`,`ad`,`typePoste`,`nSalle`, `nbLog` FROM `poste`');
         while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
         {
-            $postes[$donnees['nomPoste']] = new ModifPoste($donnees['nPoste'], $donnees['nomPoste'], $donnees['indIP'], $donnees['ad'], $donnees['typePoste'], $donnees['nSalle']);
+            $postes[$donnees['nomPoste']] = new ModifPoste($donnees['nPoste'], $donnees['nomPoste'], $donnees['indIP'], $donnees['ad'], $donnees['typePoste'], $donnees['nSalle'], $donnees ['nbLog']);
         }
         return $postes;
     }
 
-    public function modifPoste($nPoste, $nomPoste,$ip, $ad,$type, $nsalle){
-        $req = $this->getPDO()->prepare('UPDATE `poste` SET `nPoste`=":nPoste",`indIP`=":indIP",`ad`=:ad,`typePoste`=":typePoste",`nSalle`=":nSalle" WHERE nomPoste=":nomPoste"');
+    public function modifPoste($nPoste, $nomPoste,$ip, $ad,$type, $nsalle, $nbLog){
+        $req = $this->getPDO()->prepare('UPDATE `poste` SET `nPoste`=":nPoste",`indIP`=":indIP",`ad`=:ad,`typePoste`=":typePoste",`nSalle`=":nSalle",`nbLog`=":nbLog" WHERE nomPoste=":nomPoste"');
         $req->execute(array(
             'nPoste' => $nPoste,
             'nomPoste' => $nomPoste,
             'indIP' => $ip,
             'ad' => $ad,
             'typePoste' => $type,
-            'nSalle' => $nsalle
+            'nSalle' => $nsalle,
+            'nbLog' => $nbLog
         ));
     }
 }
