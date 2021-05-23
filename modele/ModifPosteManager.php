@@ -17,15 +17,15 @@ class ModifPosteManager extends Manager
     }
 
     public function modifPoste($nPoste, $nomPoste,$ip, $ad,$type, $nsalle, $nbLog){
-        $req = $this->getPDO()->prepare('UPDATE `poste` SET `nPoste`=":nPoste",`indIP`=":indIP",`ad`=:ad,`typePoste`=":typePoste",`nSalle`=":nSalle",`nbLog`=:nbLog WHERE nomPoste=":nomPoste"');
+        $req = $this->getPDO()->prepare('UPDATE poste SET nPoste=?,indIP=?,ad=?,typePoste=?,nSalle=?,nbLog=? WHERE nomPoste=?');
         $req->execute(array(
-            'nPoste' => $nPoste,
-            'indIP' => $ip,
-            'ad' => $ad,
-            'typePoste' => $type,
-            'nSalle' => $nsalle,
-            'nbLog' => $nbLog,
-            'nomPoste' => $nomPoste
+            $nPoste,
+            $ip,
+            $ad,
+            $type,
+            $nsalle,
+            $nbLog,
+            $nomPoste
         ));
     }
 }
