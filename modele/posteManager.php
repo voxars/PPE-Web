@@ -16,5 +16,16 @@ class PosteManager extends Manager
         return $postes;
 
     }
+
+    public function testExist($nPoste){
+        $q = $this->getPDO()->prepare('SELECT EXISTS(SELECT nPoste FROM poste WHERE nposte = ?');
+        $q->execute(array($nPoste));
+        if($q>0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }
 ?>

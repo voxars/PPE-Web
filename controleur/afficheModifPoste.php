@@ -33,7 +33,10 @@ $type = $typeManager->getList();
 
 if (!empty($_POST['nPoste']) && !empty($_POST['nomPoste']) && !empty($_POST['indIP']) && !empty($_POST['ad']) && !empty($_POST['typePoste']) && !empty($_POST['nSalle']))
 {
+
     $modifPosteManager = new ModifPosteManager();
+    //$test = $posteManager->testExist($_POST['nPoste']);
+    //var_dump($test);
     $modifPoste = $modifPosteManager->modifPoste($_POST['nPoste'], $_POST['nomPoste'], $_POST['indIP'], $_POST['ad'], $_POST['typePoste'], $_POST['nSalle'], $_POST ['nbLog']);
 }
 

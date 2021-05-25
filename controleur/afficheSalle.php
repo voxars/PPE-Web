@@ -8,7 +8,7 @@ require_once("$racine/modele/SalleManager.php");
 require_once("$racine/modele/posteManager.php");
 require_once("$racine/modele/areaManager.php");
     
-$titre = "Salle";
+$titre = "Salles";
 
 $salleManager = new SalleManager();
 $salles = $salleManager->getList();

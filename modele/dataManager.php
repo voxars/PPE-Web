@@ -5,16 +5,6 @@ require_once("modele/data.php");
 
 class dataManager extends Manager
 {
-    public function getDataSalle() //instancie un objet
-    {
-        $data = [];
-        $q = $this->getPDO()->query('nSalle FROM salle');
-        while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
-        {
-            $data[$donnees['id']] = new data($donnees['name']);
-        }
-        return $data;
-    }
 
     public function getDataIp() //instancie un objet
     {
